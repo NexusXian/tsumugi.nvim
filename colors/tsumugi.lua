@@ -148,7 +148,7 @@ colorscheme.highlight_all({
   Debug = "WarningMsg",
   Delimiter = "tsumugiOrange",
   Exception = { fg = red, bold = false },
-  Function = "nexusBlue",
+  Function = "nexusBlueBold",
   Identifier = "tsumugiBlue",
   Keyword = "tsumugiRed",
   Label = "tsumugiRed",
