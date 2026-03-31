@@ -13,7 +13,6 @@ local Nexusgreen = { "#5cca95", 181, "green" }
 local Nexusblack = { "#313b3b", 194, "black" }
 
 -- os color
-
 local apple = { "#9e9e9e", 195, "white" }
 local linux = { "#e84e0f", 196, "yellow" }
 local windows = { "#097ed7", 197, "blue" }
@@ -59,9 +58,8 @@ local bright_purple = { "#c678dd", 175, "magenta" }
 local bright_aqua = { "#8ec07c", 108, "cyan" }
 local bright_orange = { "#fe8019", 208, "darkyellow" }
 
---perfomance colors
+-- performance colors
 local nexusBlue = { "#BBBD37", 243, "darkgray" }
-
 
 local white = dslight2
 local black = dsdark2
@@ -117,7 +115,7 @@ colorscheme.highlight_all({
   tsumugiOrangeBold = { fg = orange, bold = true },
 
   nexusBlue = { fg = nexusBlue },
-  nexusBlueBold = { fg = nexusBlue,bold = true },
+  nexusBlueBold = { fg = nexusBlue, bold = true },
 
   -- Basic styles
   Bold = { bold = true },
@@ -136,14 +134,14 @@ colorscheme.highlight_all({
 
   -- Literals
   Constant = "tsumugiPurple",
-  String = { fg = green, italic = false},
+  String = { fg = green, italic = false },
   Character = "tsumugiPurple",
   Number = "tsumugiPurple",
   Boolean = "tsumugiPurple",
   Float = "tsumugiPurple",
 
   -- Syntax
-  Comment = { fg = gray, italic = false},
+  Comment = { fg = gray, italic = false },
   Conditional = "tsumugiRed",
   Debug = "WarningMsg",
   Delimiter = "tsumugiOrange",
@@ -153,8 +151,8 @@ colorscheme.highlight_all({
   Keyword = "tsumugiRed",
   Label = "tsumugiRed",
   Noise = "Delimiter",
-  Operator = { fg = green, bold = true},
-  Repeat = { fg = red, italic = false},
+  Operator = { fg = green, bold = true },
+  Repeat = { fg = red, italic = false },
   Statement = "tsumugiRed",
   StorageClass = { fg = orange, bold = false },
   Structure = "tsumugiAqua",
@@ -306,18 +304,14 @@ colorscheme.highlight_all({
 
   -- Folds
   FoldColumn = { fg = gray, bg = bg2, bold = true },
-  Folded = { fg = gray, bg = bg2, italic = false},
+  Folded = { fg = gray, bg = bg2, italic = false },
 
   -- Diffs
-  DiffAdd = { fg = black, bg = bg0, reverse = true },
+  DiffAdd = { fg = green, bg = bg0 },
   diffAdded = "DiffAdd",
-  DiffChange = { fg = aqua, bg = bg0, reverse = true },
-  DiffDelete = function(self)
-    return { fg = self.DiffAdd.fg, bg = red }
-  end,
-  DiffText = function(self)
-    return { fg = self.DiffAdd.fg, bg = yellow }
-  end,
+  DiffChange = { fg = yellow, bg = bg0 },
+  DiffDelete = { fg = red, bg = bg0 },
+  DiffText = { fg = blue, bg = bg0, bold = true },
   diffRemoved = "DiffDelete",
 
   -- Searching
@@ -463,6 +457,16 @@ colorscheme.highlight_all({
   GitSignsChange = "tsumugiYellow",
   GitSignsDelete = "tsumugiRed",
 
+  -- Neo-tree git status
+  NeoTreeGitAdded = { fg = green },
+  NeoTreeGitModified = { fg = yellow },
+  NeoTreeGitDeleted = { fg = red },
+  NeoTreeGitRenamed = { fg = blue },
+  NeoTreeGitUntracked = { fg = aqua },
+  NeoTreeGitIgnored = { fg = gray },
+  NeoTreeGitConflict = { fg = orange, bold = true },
+  NeoTreeGitStaged = { fg = green, bold = true },
+
   -- lazy.nvim
   LazyButton = "TabLine",
   LazyButtonActive = "TabLineSel",
@@ -571,20 +575,15 @@ colorscheme.highlight_all({
   DashboardHeader = "tsumugiYellow",
   DashboardFooter = "tsumugiYellow",
   DashboardProjectTitle = "tsumugiPurpleBold",
-  -- DashboardProjectTitleIcon = { fg = Nexusice },
   DashboardProjectIcon = { fg = windows },
-
   DashboardMruTitle = "tsumugiOrangeBold",
-  -- DashboardMruIcon = { fg = Nexus#3FB4CC,
   DashboardFiles = { fg = aqua, italic = true },
   DashboardShotCutIcon = { fg = Nexusgreen },
 
   -- dropbar
   -- DropBarCurrentContext = { bg = bg2 },
-  -- -- DropBarFzfMatch = { link = 'TelescopeMatching' },
   -- DropBarHover = { bg = bg2 },
   -- DropBarIconCurrentContext = { bg = bg2 },
-
 })
 
 colorscheme.highlight_terminal({
@@ -605,4 +604,3 @@ colorscheme.highlight_terminal({
   [15] = terminal_color_14,
   [16] = terminal_color_15,
 })
-
