@@ -457,7 +457,7 @@ colorscheme.highlight_all({
   GitSignsChange = "tsumugiYellow",
   GitSignsDelete = "tsumugiRed",
 
-  -- Neo-tree git status
+  -- Neo-tree git
   NeoTreeGitAdded = { fg = green },
   NeoTreeGitModified = { fg = yellow },
   NeoTreeGitDeleted = { fg = red },
@@ -579,11 +579,6 @@ colorscheme.highlight_all({
   DashboardMruTitle = "tsumugiOrangeBold",
   DashboardFiles = { fg = aqua, italic = true },
   DashboardShotCutIcon = { fg = Nexusgreen },
-
-  -- dropbar
-  -- DropBarCurrentContext = { bg = bg2 },
-  -- DropBarHover = { bg = bg2 },
-  -- DropBarIconCurrentContext = { bg = bg2 },
 })
 
 colorscheme.highlight_terminal({
